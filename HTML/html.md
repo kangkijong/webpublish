@@ -1,3 +1,6 @@
+## !! 크로스 브라우징(Cross Browsing) 
+- 작성한 UI(HTML) 페이지를 모든 브라우저에서 동일한 모습으로 출력
+
 [2025-08-06 수]
 ## 1. HTML(HyperText Markup Language)
 - 팀 버너스리 개발, W3C에서 HTML 버전 등 관리
