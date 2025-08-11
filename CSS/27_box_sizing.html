@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+        }
+        
+        /* box-sizing: content;에 border나 padding을 추가하면 요소의 너비나 높이에 추가가 되어 해당 box의 크기는 그만큼 더 커지게 된다.  */
+        div.content{
+            box-sizing: content-box;
+            border: 10px solid red;
+        }
+
+        /* box-sizing: border-box;에 border나 padding을 추가하면 해당 box의 크기는 그만큼 더 커지지 않고 사용자가 지정한 너비나 높이만큼 길이에 맞추게 된다. */
+        div.border{
+            box-sizing: border-box;
+            border: 10px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box Sizing</h1>
+    <div class="content">Box Sizing : Content-box</div>
+    <div class="border">Box Sizing : Border-box</div>
+</body>
+</html>
