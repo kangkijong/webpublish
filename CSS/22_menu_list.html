@@ -5,34 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu List</title>
     <style>
-        header{
-            border-bottom: 1px solid gray;
+        /* header { 
+            padding-bottom: 20px;
+            border-bottom: 1px solid gray; 
         }
-        .header-logo{
-            width: 219px;
+        .header-logo {
             display: inline-block;
-            /* border: 1px solid red; */
-            vertical-align: middle;
+            vertical-align: bottom;
         }
-        .header-left, .header-right{
-            width: calc(50% - 114px);
+        .header-left, .header-right {
+            width: 600px;
+            display: inline-block;
+            vertical-align: bottom;
+        }
+        .header-left ul, .header-right ul { padding: 0; }
+        .header-right ul { text-align: right;}
+        .header-left li { 
+            width: 100px;
+            list-style: none;
             display: inline-block;
         }
-        .header-left{
-            text-align: left;
-        }
-        .header-right{
+        .header-right li {
+            padding: 0 0 0 20px;
+            list-style: none;
+            display: inline-block;
             text-align: right;
         }
-        .header-left ul, .header-right ul{
-            padding: 0;
+        .header-left a, .header-right a {
+            text-decoration: none;
+            color : #777;
+        } */
+         header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* 요소들 사이에 동일한 간격을 둠 */
+            border-bottom: 1px solid gray;
         }
-        .header-left ul > li, .header-right ul > li{
+        .header-left ul, .header-right ul {
+            padding: 0;
+            margin: 0;
+        }
+        .header-left ul > li, .header-right ul > li {
             list-style-type: none;
             display: inline-block;
             padding: 0 5px;
         }
-        ul > li > a{
+        ul > li > a {
             text-decoration: none;
             color: #333;
         }
