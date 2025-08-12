@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-Index Style</title>
+    <style>
+        div {
+            width: 150px;
+            height: 150px;
+            color: #fff;;
+        }
+        div.red-child {
+            background-color: red;
+            position: relative;
+            top: 20px;
+            left: 50px;
+            z-index: 3;
+        }
+        div.green-child {
+            background-color: green;
+            position: relative;
+            top: -10px;
+            left: 100px;
+            z-index: 2; 
+            /* z-index가 같다면 나중에 선언된 것이 앞으로 나옴 */
+        }
+        div.blue-child {
+            background-color: blue;
+            position: relative;
+            top: -200px;
+            left: 10px;
+            z-index: 100;
+            /* z-index는 숫자가 클 수록 우선순위가 높음 */
+        }
+    </style>
+</head>
+<body>
+    <h1>Z-Index Style</h1>
+    <div class="red-child">Child #1</div>
+    <div class="green-child">Child #2</div>
+    <div class="blue-child">Child #3</div>
+</body>
+</html>
