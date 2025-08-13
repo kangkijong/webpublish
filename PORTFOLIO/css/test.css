@@ -132,6 +132,7 @@ section.container {
     background-color: var(--color-accent);
     color: var(--color-black);
     border-radius: 4px;
+    cursor: pointer;
 }
 .home-contact:hover {
     /* font-weight: bold; */
@@ -222,4 +223,97 @@ section.container {
 .bar-value {
     background-color: var(--color-accent);
     height: 3px;
+}
+
+/*
+    Work
+*/
+#work {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+#work .categories {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#work .categories li {
+    margin: 2rem 0;
+}
+#work .categories li .category {
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    background-color: var(--color-black);
+    border: 1px solid var(--color-accent);
+    color: var(--color-white);
+    border-radius: 4px;
+    cursor: pointer;
+}
+#work .categories li .category:hover {
+    background-color: var(--color-accent);
+    color: var(--color-black)
+}
+#work .categories li .category .category-count {
+    background-color: orange;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2em 0.5em;
+    font-size: 0.7rem;
+    position: relative;
+    top: -5px;
+    right: -5px;
+}
+#work .projects {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fill, minmax(25%, auto)); */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    row-gap: 10px;
+    column-gap: 10px;
+}   
+#work .projects .project {
+
+}
+#work .projects .project .project-img {
+    border-radius: 10px;
+    width: 100%;
+}
+#work .projects .project .project-metadata {
+
+}
+#work .projects .project .project-metadata .project-metadata-title {
+
+}
+#work .projects .project .project-metadata p {
+
+}
+
+/*
+    Contact (Footer)
+*/
+#contact {
+    position: relative;
+    bottom: 0;
+    height: 300px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+    padding-top: 50px;
+}
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+#contact p {
+    margin-bottom: 1.5rem;
+}
+#contact .email {
+    font-size: 1.2rem;
+}
+#contact .fa-brands {
+    font-size: 2rem;
+    padding: 0 8px;
+}
+#contact .copy {
+    font-size: 0.8rem;
 }
