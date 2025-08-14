@@ -5,16 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Judy's Portfolio</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="css/test.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-
-    <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
     <header class="header">
@@ -32,6 +27,7 @@
                 <li><a href="#contact" class="header-menu-item">Contact</a></li>
             </ul>
         </nav>
+        <button id="menu-toggle" class="header-toggle"><i class="fa-solid fa-bars"></i></button>
     </header>
     <main>
         <section id="home">
@@ -147,7 +143,7 @@
             <h2 class="title">My Work</h2>
             <p class="description">Projects</p>
             <ul class="categories">
-                <li><button class="category">All<span class="category-count">8</span></button></li>
+                <li><button class="category">All<span class="category-count selected">8</span></button></li>
                 <li><button class="category">Front-end<span class="category-count">4</span></button></li>
                 <li><button class="category">Back-end<span class="category-count">2</span></button></li>
                 <li><button class="category">Mobile<span class="category-count">2</span></button></li>
@@ -212,8 +208,52 @@
             </ul>
         </section>
         
-        <section id="testimonial" class="section container"></section>
+        <section id="testimonial" class="section container">
+            <h2 class="title">Testimonial</h2>
+            <p class="description">See what they say about me</p>
+            <ul class="testimoinals">
+                <li class="testimoinal">
+                    <img class="testimoinal-img" src="images/testimonials/people1.webp" alt="testimoinal-img">
+                    <div class="testimoinal-text">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo excepturi atque, laboriosam deleniti illum doloremque laudantium molestiae aliquid, debitis repellat repudiandae dolorum perferendis. Voluptate maxime magnam, aperiam vel libero esse?</p>
+                        <p><a href="#" class="testimoinal-text-name">James Kim</a> / Google</p>
+                    </div>
+                </li>
+                <li class="testimoinal">
+                    <img class="testimoinal-img" src="images/testimonials/people2.webp" alt="testimoinal-img">
+                    <div class="testimoinal-text">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo excepturi atque, laboriosam deleniti illum doloremque laudantium molestiae aliquid, debitis repellat repudiandae dolorum perferendis. Voluptate maxime magnam, aperiam vel libero esse?</p>
+                        <p><a href="#" class="testimoinal-text-name">Smith Park</a> / Samsung</p>
+                    </div>
+                </li>
+                <li class="testimoinal">
+                    <img class="testimoinal-img" src="images/testimonials/people3.webp" alt="testimoinal-img">
+                    <div class="testimoinal-text">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo excepturi atque, laboriosam deleniti illum doloremque laudantium molestiae aliquid, debitis repellat repudiandae dolorum perferendis. Voluptate maxime magnam, aperiam vel libero esse?</p>
+                        <p><a href="#" class="testimoinal-text-name">Anna Jin</a> / Samsung</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Arrow top -->
+        <aside>
+            <a class="arrow-up" href="#"><i class="fa-solid fa-arrow-up"></i></a>
+        </aside>
+
     </main>
-    <footer id="contact"></footer>
+    <footer id="contact" class="container">
+        <h2 class="title">Let's talk</h2>
+        <p class="description">jeon.developer.judy@gmail.com</p>
+        <ul class="contact-links">
+            <li>
+                <a class="contact-link" href="#"><i class="fa-brands fa-github"></i></a>
+            </li>
+            <li>
+                <a class="contact-link" href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </li>
+        </ul>
+        <p>Dream Software Engineer Judy - All right reserved</p>
+    </footer>
 </body>
 </html>
