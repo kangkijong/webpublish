@@ -1,0 +1,8 @@
+/**
+ * commons 폴더에 저장된 자바스크립트 함수 임포트
+ */
+import { singleGugudan, multigugudan } from '../commons/gugudan.js'
+
+singleGugudan(3);
+singleGugudan(7);
+multigugudan(3, 7); // 3단 ~ 7단까지 출력
