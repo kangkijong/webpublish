@@ -7,7 +7,7 @@ export function singleGugudan(dan) {
     }
 }
 
-export function multigugudan(start, end) {
+export function multiGugudan(start, end) {
     for(let i=1 ; i<=9 ; i++) {
         let rows = '';
         for(let j=start ; j<=end ; j++) {

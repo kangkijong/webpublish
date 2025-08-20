@@ -5,4 +5,4 @@ import { singleGugudan, multigugudan } from '../commons/gugudan.js'
 
 singleGugudan(3);
 singleGugudan(7);
-multigugudan(3, 7); // 3단 ~ 7단까지 출력
+multiGugudan(3, 7); // 3단 ~ 7단까지 출력
