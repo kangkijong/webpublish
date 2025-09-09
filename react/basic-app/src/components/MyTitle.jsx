@@ -8,6 +8,6 @@ export function MyTitle() {
 export function MyTitle3() {
     return (
         // <h3 style={{background: "cyan"}}>Hello React App!!!!!</h3>
-        <h3 className="title3">Hello React App!!!!!</h3>
+        <h3 className="title3">Hello~ React App!!!!!</h3>
     );
 }
