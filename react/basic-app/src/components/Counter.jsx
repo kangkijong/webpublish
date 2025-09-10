@@ -1,9 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Counter({click, total, init}) {
-    console.log(init, typeof init);
-
     const [number, setNumber] = useState(0);
+
+    // useEffect : Counter 컴포넌트 로딩 시 최초에 처음 실행되는 함수
+    // 값이 변경될 때마다 재호출
+    // useEffect(callback(()=>{}), dependencies);
+    useEffect(()=>{
+        setNumber(0);
+    }, [init]);
     
     const handleClickIncrement = () => {
         if(number < 10) {
@@ -18,8 +23,7 @@ export function Counter({click, total, init}) {
         } else setNumber(0);
     }
     const handleClickInit = () => {
-        setNumber(0);
-        click(0);
+        click(0);   // 부모의 click 함수 호출
     }
 
     return (
@@ -31,8 +35,8 @@ export function Counter({click, total, init}) {
             </div>
             <div>
                 <button type="button" onClick={handleClickDecrement}>- (감소)</button>
-                <button type="button" onClick={handleClickInit}>초기화</button>
                 <button type="button" onClick={handleClickIncrement}>+ (증가)</button>
+                <button type="button" onClick={handleClickInit}>초기화</button>
             </div>
         </div>
     );

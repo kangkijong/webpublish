@@ -1,0 +1,74 @@
+[
+    {
+        "img": "/images/product1.jpg",
+        "title": "[단독]UNISEX WAXED COTTON HUNTING JACKET_3 color",
+        "sale": "30%",
+        "price": "208,822",
+        "rank": 1,
+        "like": true
+    },
+    {
+        "img": "/images/product2.jpg",
+        "title": "HALF SLEEVE KNIT TOP OLIVE_UDSW5C201K1",
+        "sale": "31%",
+        "price": "60,876",
+        "rank": 2,
+        "like": true
+    },
+    {
+        "img": "/images/product3.jpg",
+        "title": "PLEATS MINI SKIRT GREY",
+        "sale": "27%",
+        "price": "93,138",
+        "rank": 3,
+        "like": true
+    },
+    {
+        "img": "/images/product4.jpg",
+        "title": "UNISEX LEATHER LOGO COLLARED T-SHIRT",
+        "sale": "27%",
+        "price": "57,038",
+        "rank": 4,
+        "like": true
+    },
+    {
+        "img": "/images/product5.jpg",
+        "title": "UNISEX ALTER-SUEDE HALF JACKET",
+        "sale": "31%",
+        "price": "204,516",
+        "rank": 5,
+        "like": true
+    },
+    {
+        "img": "/images/product6.jpg",
+        "title": "MAXI SHIRRING DRESS BLACK_UDDR5B228BK",
+        "sale": "37%",
+        "price": "117,331",
+        "rank": 6,
+        "like": true
+    },
+    {
+        "img": "/images/product7.jpg",
+        "title": "ESSENTIAL 2 BUTTON WOOL BLAZER",
+        "sale": "31%",
+        "price": "170,316",
+        "rank": 7,
+        "like": false
+    },
+    {
+        "img": "/images/product8.jpg",
+        "title": "CLASSIC BOWLING BAG BLACK_UDBA5F203BK",
+        "sale": "30%",
+        "price": "138,982",
+        "rank": 8,
+        "like": true
+    },
+    {
+        "img": "/images/product9.jpg",
+        "title": "UNISEX CUPID ARCH LOGO T-SHIRT OFF",
+        "sale": "31%",
+        "price": "37,620",
+        "rank": 9,
+        "like": false
+    }
+]
