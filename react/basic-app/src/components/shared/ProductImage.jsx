@@ -1,4 +1,4 @@
-import { Image } from '../commons/image.jsx'
+import { Image } from '../commons/Image.jsx'
 
 /**
  * 상품 이미지 컴포넌트
