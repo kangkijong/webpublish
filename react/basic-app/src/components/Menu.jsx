@@ -3,7 +3,9 @@
  */
 export function Menu({title, color, bg, href}) {
     return (
-        <a href={href} className="menu" style={{ color: color, background: bg }}>{title}</a>
+        <a  href={href} 
+            className="menu" 
+            style={{ color: color, background: bg }}>{title}</a>
     );
 }
 // export function Menu(props) {
