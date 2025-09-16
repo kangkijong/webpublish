@@ -6,9 +6,7 @@ export function Footer() {
     return (
         <footer id="contact" class="container">
             <Title title="Let's talk" />
-            {/* <h2 class="title">Let's talk</h2> */}
             <Description text="jeon.developer.judy@gmail.com"/>
-            {/* <p class="description">jeon.developer.judy@gmail.com</p> */}
             <ul class="contact-links">
                 <li>
                     <a class="contact-link" href="#">
