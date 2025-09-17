@@ -27,7 +27,7 @@ export function Testimonials() {
             "company": "Samsung"
         },
         {
-            "img": "/images/testimonials/people2.webp",
+            "img": "/images/testimonials/people3.webp",
             "msg": "testimoinal-img",
             "ment": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo excepturi atque, laboriosam deleniti illum doloremque laudantium molestiae aliquid, debitis repellat repudiandae dolorum perferendis. Voluptate maxime magnam, aperiam vel libero esse?",
             "manager": "Anna Jin",
