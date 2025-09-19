@@ -1,24 +1,23 @@
 import { Link } from 'react-router-dom';
 import { FiShoppingBag } from "react-icons/fi";
 
-export function Header() {
+export function Header({cartCount}) {
     return (
         <div className="header-outer">
             <div className="header">
-                <Link to="" className="header-left">
+                <Link to="/" className='header-left'>
                     <FiShoppingBag />
                     <span>Shoppy</span>
                 </Link>
-                <nav className="header-right">
+                <nav className='header-right'>
                     <Link to="/all">Products</Link>
+                    <Link to="/cart">MyCart({cartCount})</Link>
                     <Link to="/login">
                         <button type="button">Login</button>
                     </Link>
                     <Link to="/signup">
                         <button type="button">Signup</button>
-                    </Link>
-                    <Link to="/"></Link>
-                    <Link to="/"></Link>
+                    </Link>                   
                 </nav>
             </div>
         </div>
