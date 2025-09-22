@@ -8,7 +8,7 @@ export function StarRating({totalRate, style}) {
     const color = (style === "star-coral") ? "coral" : "black"; 
 
     //totalRate의 값의 범위를 정확히 정의 : 1 ~ 5
-    let fillStars = 0, halfStar = 0, emptyStar = 0 ;
+    let fillStars = 0, halfStar = 0, emptyStar = 0;
     if(totalRate > 0 && totalRate <= 5) {
         fillStars = Math.floor(totalRate);  //채워진 별 갯수
         halfStar = (totalRate % 1) !== 0;  //반별 여부 체크
@@ -38,12 +38,20 @@ export function StarRating({totalRate, style}) {
                 </span>
             )}
 
+            {/* 별점 표시 - 리뷰 */}
+            { style === "star-black-big"  && 
+                <>
+                    <span className={style.concat(" number")}>{totalRate} /</span>
+                    <span className={style.concat(" tot-number")}>5.0</span>
+                </>
+            }
+
             {/* 별점 표시 */}
             { style === "star-coral"  && 
                 <>
                     <span className={style.concat(" number")}>{totalRate}</span>
                 </>
-            } 
+            }
 
         </div>
     );
