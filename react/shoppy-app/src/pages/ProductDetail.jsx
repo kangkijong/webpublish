@@ -18,7 +18,6 @@ export function ProductDetail({ addCart }) {
     const [tabName, setTabName] = useState('detail');
     const tabEventNames = ['detail', 'review', 'qna', 'return'];
 
-
     useEffect(()=> {
         const filterData = async () => {
             const jsonData = await axiosData("/data/products.json");
