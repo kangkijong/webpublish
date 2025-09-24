@@ -7,12 +7,15 @@ import { Login } from './pages/Login.jsx';
 import { Signup } from './pages/Signup.jsx';
 import { ProductDetail } from './pages/ProductDetail.jsx';
 import { Cart } from './pages/Cart.jsx';
+import { CheckoutInfo } from './pages/CheckoutInfo.jsx';
+import { Support } from './pages/Support.jsx';
 
 import { cartItemsCheck, updateCartItemsQty } from './utils/cart.js';
 
 import './styles/cgvSignup.css';
 import './styles/cgv.css';
 import './styles/shoppy.css';
+import './styles/commons.css';
 
 export default function App() {
   const [cartCount, setCartCount] = useState(0);  //1. 장바구니 수량 관리  
@@ -40,8 +43,10 @@ export default function App() {
     }
   }
 
-  // console.log('cartItems-->', cartItems);
+  console.log('cartItems-->', cartItems);
   
+  
+
   return (
     <BrowserRouter>
       <Routes>
@@ -53,6 +58,8 @@ export default function App() {
           <Route path="/cart" element={<Cart  items={cartItems} 
                                               updateCart={updateCart}/>} />
           <Route path="/products/:pid" element={<ProductDetail addCart={addCart} />} />
+          <Route path="/checkout" element={<CheckoutInfo />} />
+          <Route path="/support" element={<Support />} />
         </Route>
       </Routes>
     </BrowserRouter>
