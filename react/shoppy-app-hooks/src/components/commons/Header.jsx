@@ -1,11 +1,11 @@
-import { useState, useEffect, useContext } from 'react';    //
+import { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { FiShoppingBag } from "react-icons/fi";
 import { GiShoppingCart } from "react-icons/gi";
-import { CartContext } from '../../context/CartContext';    //
+import { CartContext } from '../../context/CartContext';
 
-export function Header() {                                  //
-    const  {cartCount} = useContext(CartContext);           //
+export function Header() {
+    const  {cartCount} = useContext(CartContext);
 
     return (
         <div className="header-outer">
