@@ -4,7 +4,7 @@ import { decrement, increment } from '../../feature/counter/counterSlice.js'
 
 export function Counter() {
   const count = useSelector((state) => state.counter.value);
-  const dispatch = useDispatch();    // 해당 컴포넌트에서 이벤트(액션) 발생 시 slice 요청담당
+  const dispatch = useDispatch(); //해당 컴포넌트에서 이벤트(액션) 발생시 slice 요청담당
 
   return (
     <div>

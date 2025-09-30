@@ -12,16 +12,22 @@ import { useCart } from '../hooks/useCart.js';
 import { useProduct } from '../hooks/useProduct.js';
 import { ProductContext } from '../context/ProductContext.js';
 
+import { useDispatch } from 'react-redux';
+// import { addCartItem, updateCartCount } from '../feature/cart/cartSlice.js';
+import { addCart } from '../feature/cart/cartAPI.js';
+
 export function ProductDetail() {
+    const dispatch = useDispatch();
+
     const {pid} = useParams();  // { pid: 1}
-    const {addCart} = useCart();
-    const {filterProduct} = useProduct();
-    const {product, imgList} = useContext(ProductContext);
+    // const { addCart } = useCart();
+    const { filterProduct } = useProduct();
+    const { product, imgList } = useContext(ProductContext);
     const [size, setSize] = useState('XS');
     const tabLabels = ['DETAIL', 'REVIEW', 'Q&A', 'RETURN & DELIVERY'];
     const [tabName, setTabName] = useState('detail');
     const tabEventNames = ['detail', 'review', 'qna', 'return'];
-
+    
     useEffect(()=> {
         filterProduct(pid);
     }, []);
@@ -34,7 +40,8 @@ export function ProductDetail() {
             size: size,
             qty: 1
         }
-        addCart(cartItem);
+        // addCart(cartItem);
+        dispatch(addCart(cartItem));  //addCart 호출 시 dispatch 전송!!
     }
 
     return (

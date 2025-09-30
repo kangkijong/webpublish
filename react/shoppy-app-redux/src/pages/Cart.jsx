@@ -1,16 +1,18 @@
-import React, {useEffect, useContext } from 'react';
+import { useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { RiDeleteBin6Line } from 'react-icons/ri';
-import { CartContext } from '../context/CartContext.js';
-import { useCart } from '../hooks/useCart.js';
 import '../styles/cart.css';
 
+import { useSelector, useDispatch } from 'react-redux';
+import { showCart, updateCart, removeCart } from '../feature/cart/cartAPI.js';
+
 export function Cart() {
-    const navigate = useNavigate();   
-    const {showCart, updateCart, removeCart} = useCart();
-    const {cartList, totalPrice} = useContext(CartContext); // 2. 실행
-    
-    useEffect(()=> { showCart() }, []);    // 1. 실행
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const cartList = useSelector((state) => state.cart.cartList);
+    const totalPrice = useSelector((state) => state.cart.totalPrice);   
+      
+    useEffect(()=> {  dispatch(showCart());  }, []);    
 
     return (
         <div className='cart-container'>
@@ -18,7 +20,6 @@ export function Cart() {
             { cartList && cartList.map(item => 
                 <div key={item.pid}>
                     <div className='cart-item'>
-                        {/* {item.cid} */}
                         <img src={item.image} alt="product img" />
                         <div className='cart-item-details'>
                             <p className='cart-item-title'>{item.name}</p>
@@ -28,16 +29,15 @@ export function Cart() {
                         </div>
                         <div className='cart-quantity'>
                             <button type='button'
-                                    onClick={()=>{ item.qty > 1 &&
-                                                    updateCart(item.cid, '-')}}>-</button>
+                                    onClick={()=>{dispatch(updateCart(item.cid, '-'))}}>-</button> 
                             <input type='text' value={item.qty} readOnly/>
                             <button type='button'
-                                    onClick={()=>{updateCart(item.cid, '+')}}>+</button>
+                                    onClick={()=>{dispatch(updateCart(item.cid, '+'))}}>+</button>
                         </div>
                         <button className='cart-remove'
-                                onClick={()=>{removeCart(item.cid, item.qty, item.price)}}>
+                                onClick={()=>{dispatch(removeCart(item.cid))}}> 
                             <RiDeleteBin6Line />
-                        </button>
+                        </button> 
                     </div>
                 </div>    
             )}
@@ -80,7 +80,7 @@ export function Cart() {
                     <img src="/images/cart.jpg" 
                          style={{width:"50%", marginTop:"20px"}} />
                 </div>
-            }
+            } 
         </div>
     );
 }

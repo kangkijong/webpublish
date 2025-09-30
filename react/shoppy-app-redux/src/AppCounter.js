@@ -8,4 +8,3 @@ export default function AppCounter() {
         </div>
     );
 }
-
