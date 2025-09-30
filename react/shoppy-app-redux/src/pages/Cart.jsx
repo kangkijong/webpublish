@@ -69,8 +69,7 @@ export function Cart() {
                     <div className='cart-actions'>
                         <button type='button'
                                 onClick={()=>{
-                                    navigate("/checkout", {state: {cartList: cartList, 
-                                                                   totalPrice: totalPrice}});
+                                    navigate("/checkout");
                                 }}>주문하기</button>
                     </div>
                 </>
