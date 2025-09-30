@@ -12,7 +12,7 @@ export function Header() {
             <div className="header">
                 <Link to="/" className='header-left'>
                     <FiShoppingBag />
-                    <span>Shoppy-hooks</span>
+                    <span>Shoppy-redux(toolkit)</span>
                 </Link>
                 <nav className='header-right'>
                     <Link to="/all">Products</Link>
