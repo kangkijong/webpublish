@@ -1,3 +1,4 @@
+import React from 'react';
 import { addCartItem, updateCartCount, 
          showCartItem, updateTotalPrice,
          updateCartItem, removeCartItem } from './cartSlice.js';
@@ -21,7 +22,7 @@ export const showCart = () => async (dispatch) => {
     dispatch(updateTotalPrice());
 }
 
-export const addCart = (cartItem) => async (dispatch) => {
-    dispatch(addCartItem({"cartItem":cartItem})); 
+export const addCart = (pid, size) => async (dispatch) => {
+    dispatch(addCartItem({"cartItem":{"pid":pid, "size":size, "qty":1}})); 
     dispatch(updateCartCount());
 }
